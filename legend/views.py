@@ -31,6 +31,7 @@ def game(request):
         
             result= flames[0]
             FlamesResult.objects.create(name1=form.cleaned_data['name1'], name2=form.cleaned_data['name2'], result=result)
+            form = FlamesForm(initial={'name1': name1, 'name2': ''})
 
     else:
         form=FlamesForm()
