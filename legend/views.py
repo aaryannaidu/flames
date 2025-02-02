@@ -7,7 +7,9 @@ class FlamesForm(forms.Form):
     name1 = forms.CharField(label="Name 1", widget=forms.TextInput(attrs={'placeholder': 'Enter first name'}))
     name2 = forms.CharField(label="Name 2", widget=forms.TextInput(attrs={'placeholder': 'Enter second name'}))
 
+from django_ratelimit.decorators import ratelimit
 
+@ratelimit(key='ip', rate='10/m', method='POST', block=True)
 
 def game(request):
     result=''

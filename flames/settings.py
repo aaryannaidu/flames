@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-md!t8&$=63p-bw_%0dp39t#li$zv9h^l94@-pq*3gnhjb&!jj_
 DEBUG = False
 
 # ALLOWED_HOSTS = ['https://flames-ukie.onrender.com', "127.0.0.1", "localhost"]
-ALLOWED_HOSTS=['*']
+ALLOWED_HOSTS=['https://flames-ukie.onrender.com','localhost','127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
