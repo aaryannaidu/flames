@@ -29,7 +29,7 @@ DEBUG =False
 # ALLOWED_HOSTS = ['https://flames-ukie.onrender.com', "127.0.0.1", "localhost"]
 ALLOWED_HOSTS=['flames-ukie.onrender.com','localhost','127.0.0.1']
 # Application definition
-CSRF_TRUSTED_ORIGINS = ['flames-ukie.onrender.com']
+CSRF_TRUSTED_ORIGINS = ['https://flames-ukie.onrender.com']
 INSTALLED_APPS = [
     'legend',
     'django.contrib.admin',
