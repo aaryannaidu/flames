@@ -24,10 +24,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-md!t8&$=63p-bw_%0dp39t#li$zv9h^l94@-pq*3gnhjb&!jj_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG =False
+DEBUG = True
 
 # ALLOWED_HOSTS = ['https://flames-ukie.onrender.com', "127.0.0.1", "localhost"]
-ALLOWED_HOSTS=['flames-ukie.onrender.com','localhost','127.0.0.1']
+ALLOWED_HOSTS=['flames-ukie.onrender.com','localhost','127.0.0.1', '0.0.0.0', '*','192.168.188.243']
 # Application definition
 CSRF_TRUSTED_ORIGINS = ['https://flames-ukie.onrender.com']
 INSTALLED_APPS = [
@@ -38,17 +38,23 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+# CORS settings
+CORS_ALLOW_ALL_ORIGINS = True
 
 ROOT_URLCONF = 'flames.urls'
 
